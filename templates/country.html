@@ -15,6 +15,14 @@
 				<div><a href='../continent/{{c.continent}}'>{{c['continent']}}</a></div>
 			</div>
 			<div>
+				<div>Top Level Domain</div>
+				<div>{{c['tld']}}</div>
+			</div>
+			<div>
+			<div>Area</div>
+			<div>{{"{:,.0f}".format(c['area'])}}</div>
+			</div>
+			<div>
 				<div>Population</div>
 				<div>{{"{:,.0f}".format(c['population'])}}</div>
 			</div>

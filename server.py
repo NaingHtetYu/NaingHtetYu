@@ -66,8 +66,9 @@ def updateCountryByNamePage():
 						c = x
 		c['capital'] = request.args.get('capital')
 		c['continent'] = request.args.get('continent')
+		c['area'] = request.args.get('area')
 		return render_template(
-					'countryedit.html',
+					'country.html',
 					c = c)
 
 @app.route('/delete/<n>')
