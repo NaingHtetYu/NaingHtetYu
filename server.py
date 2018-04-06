@@ -57,6 +57,28 @@ def editCountryByNamePage(n):
 		return render_template('countryedit.html',
 													c=c)
 
+@app.route('/createcountry')
+def createCountryByName():
+			return render_template('createcountry.html',
+															c = c)
+@app.route('/addcountrybyname')
+def addcountryByNamePage():
+	n = request.args.get('country')
+	c = {}
+	c['name'] = n
+	c['capital'] = request.args.get('capital')
+	c['continent'] = request.args.get('continent')
+	c['area'] = int(request.args.get('area'))
+	c['tld']  = request.args.get('tld')
+	c['population']  = float(request.args.get('population'))
+	c['gdp'] = float(request.args.get('gdp'))
+	w.append(c)
+	w.sort(key = lambda c: c['name'])
+	return render_template(
+		'country.html',
+		c = c)
+
+
 @app.route('/updateCountryByName')
 def updateCountryByNamePage():
 		n = request.args.get('name')
@@ -66,7 +88,10 @@ def updateCountryByNamePage():
 						c = x
 		c['capital'] = request.args.get('capital')
 		c['continent'] = request.args.get('continent')
-		c['area'] = request.args.get('area')
+		c['tld'] = request.args.get('tld')
+		c['area'] = int(request.args.get('area'))
+		c['population'] = float(request.args.get('population'))
+		c['gdp'] = float(request.args.get('gdp'))
 		return render_template(
 					'country.html',
 					c = c)
