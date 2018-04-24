@@ -5,11 +5,16 @@
 </head>
 	<body>
 		<h1>World Factbook</h1>
+		<div>
+			{% for z in lota %}
+			<a href="/alpha/{{z}}">{{z}}</a>
+			{% endfor %}
+		</div>
 		<div>There are {{w|length}} countries in in this page.</div>
 		<ul>
 			{% for c in w %}
 			<li><a href='/countryByName/{{c.name}}'>
-				<img src='/static/flags/{{c["tld"]}}.gif' class='tiny'>
+				<img src='/static/flags/{{c["tld"]}}.gif' class='tiny' alt='Avatar'>
 			 {{c.name}}</a></li>
 			{% endfor %}
 		</ul>
