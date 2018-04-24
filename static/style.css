@@ -1,5 +1,6 @@
 body{
 	font-family:arial;
+	background-color: #5b4d4d;
 }
 img.tiny{
     width: 20px;
@@ -13,9 +14,23 @@ img.big {
     top: 1ex;
 }
 img{width:50px;border: solid thin grey; }
-
+ul#sort a:hover{
+	background-color:  #402fef ;
+}
+ul#sort a:link{
+	background-color: #aeff22;
+	color: white;
+	padding: 10px 10px;
+	text-align: center;
+	text-decoration:none;
+	display: inline-block;
+	list-style-type: none;
+	border: solid thin;
+	border-radius: lex;
+}
 .properties div div{
 	display:inline-block;
+	font
 }
 .properties div div:first-child{
 	width:20ex;
@@ -24,9 +39,11 @@ img{width:50px;border: solid thin grey; }
 	font-weight: bold;
 }
 a{
+	color: #000000;
 	text-decoration: none;
 }
 .nav_button{
+background-color: #aeff22;
 border:solid thin black;
 padding:lex;
 width:15ex;
