@@ -28,9 +28,12 @@ ul#sort a:link{
 	border: solid thin;
 	border-radius: lex;
 }
+a:hover{
+	color: #aeff22;
+	font-style: italic;
+}
 .properties div div{
 	display:inline-block;
-	font
 }
 .properties div div:first-child{
 	width:20ex;
@@ -38,9 +41,43 @@ ul#sort a:link{
 .properties div div:last-child{
 	font-weight: bold;
 }
+.edit-button{
+	background-color: #aeff22;
+	color: white;
+	padding: 10px 10px;
+	text-align: center;
+	text-decoration:none;
+	display: inline-block;
+	list-style-type: none;
+	border: solid thin;
+	border-radius: lex;
+}
+.delete-button{
+	background-color: #aeff22;
+	color: white;
+	padding: 10px 10px;
+	text-align: center;
+	text-decoration:none;
+	display: inline-block;
+	list-style-type: none;
+	border: solid thin;
+	border-radius: lex;
+}
+.create-button{
+	background-color: #aeff22;
+	color: white;
+	padding: 10px 10px;
+	text-align: center;
+	text-decoration:none;
+	display: inline-block;
+	list-style-type: none;
+	border: solid thin;
+	border-radius: lex;
+}
 a{
 	color: #000000;
 	text-decoration: none;
+	font-style: italic;
 }
 .nav_button{
 background-color: #aeff22;
