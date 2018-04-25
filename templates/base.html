@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+	<form>
+	<div>
+	<h1>World FactBook</h1>
+	<ul id="sort">
+			{% for z in lota %}
+			<a href="/alpha/{{z}}">{{z}}</a>
+			{% endfor %}
+	</ul>
+	</div>
+
+
+</form>
+<div>
+{% block content%}
+{% endblock%}</div>
+</body>
+</html>
