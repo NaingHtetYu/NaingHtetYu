@@ -2,19 +2,19 @@ from flask import Flask, render_template, request
 import json
 
 w = json.load(open("worldl.json"))
-lota = sorted(list(set([c['name'][0] for c in w])))
-print (lota)
+zzz = sorted(list(set([c['name'][0] for c in w])))
+print (zzz)
 
 for c in w:
 	c['tld'] = c['tld'][1:]
 page_size = 20
-page_number =10
+page_number =0
 app = Flask(__name__)
 
 @app.route('/')
 def mainPage():
 	return render_template('index.html',
-		w = w[0:page_size],page_number=page_number,page_size=page_size, lota=lota)
+		w = w[0:page_size],page_number=page_number,page_size=page_size, zzz=zzz)
 
 @app.route('/begin/<b>')
 def beginPage(b):
@@ -23,7 +23,7 @@ def beginPage(b):
 		w = w[bn:bn+page_size],
 		page_number = bn,
 		page_size = page_size,
-		lota = lota
+		zzz = zzz
 		)
 
 @app.route('/continent/<a>')
@@ -44,7 +44,7 @@ def alpha(a):
 		length_of_cl = len(cl),
 		cl = cl,
 		a = a,
-		lota=lota
+		zzz=zzz
 		)
 
 @app.route('/country/<i>')
@@ -123,7 +123,8 @@ def deleteCountry(n):
                 'index.html',
                 w = w[0:page_size],
                 page_number = 0,
-                page_size = page_size
+                page_size = page_size,
+				zzz=zzz
                 )
 
 app.run(host='0.0.0.0', port=5630, debug=True)
