@@ -15,7 +15,7 @@ img.big {
 }
 img{width:50px;border: solid thin grey; }
 ul#sort a:hover{
-	background-color:  #402fef ;
+	color:  #402fef ;
 }
 ul#sort a:link{
 	background-color: #aeff22;
@@ -29,7 +29,7 @@ ul#sort a:link{
 	border-radius: lex;
 }
 a:hover{
-	color: #aeff22;
+	color: #402fef;
 	font-style: italic;
 }
 .properties div div{
